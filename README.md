@@ -2,6 +2,7 @@
 Sending video and audio from Max and Ableton in Zoom to make you the coolest person in the meeting/Make experimental music via networking.
 
 *Tutorial assumes you are using Windows 10, since I don't own a Mac*
+N.B. There's very likely a better way to do this. If you know what it is, I would love to know.
 
 ## Required Software:
 - OBS Studio Download: https://obsproject.com/download
