@@ -36,4 +36,8 @@ Link to video tutorial: (non-existent yet because I haven't made a video yet)
 
 It's very possible the audio quality may not be super great on the receiving end of Zoom. I'm assuming there's compression in Zoom that we can't get around, so it may be worthwhile to have someone on the receiving end to record what they're getting from you so you know what it "actually" sounds like, because in all likelihood it is not as pretty as what you're hearing.
 
+### Notes and Further Comments
+- I've experienced that if you start max while already in a call, you lose sound from Zoom; it seems that the easiest way around this is to just open Max first.
+
+
 If you found this helpful and want to support a starving artist who is currently out of work, I'd be happy to take your money via Venmo `@JoeSandals` :)))))
