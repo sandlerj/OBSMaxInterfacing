@@ -8,6 +8,7 @@ N.B. There's very likely a better way to do this. If you know what it is, I woul
 - OBS Studio Download: https://obsproject.com/download
 - Virtual Camera Download (click "Go to download" link on right): https://obsproject.com/forum/resources/obs-virtualcam.539/
 - Max/MSP/jitter (there's a 30-day free trial if you don't have a license yet)
+- Virtual Audio Cable (use the lite version): https://vac.muzychenko.net/en/download.htm
 
 Additionally, you'll probably want something to create/process fun and exciting experimental sounds.
 
@@ -27,14 +28,15 @@ Link to video tutorial: (non-existent yet because I haven't made a video yet)
 9. In order to display clear/unprocessed camera output, select the scene "Webcam" in OBS. Because Max is using your webcam, you will not be able to select your built in webcam within Zoom (or whatever). Doing so may cause issues or may just not work, since Max is already using it and doesn't like to share.
 10. To change the video processing, just replace the vizzle delay module with something else. Go wild.
 
-### Audio Processing
-1. Within Ableton, or whatever, just make sure you're sending audio out to your headphones/speakers.
-2. In Windows, open Sound Settings, and then select Sound Control Panel. Choose the "Recording" tab and make sure that Stereo Mix is enabled. Then go to the Volume Mixer (right click the icon in the tray) and mute any applications you don't want to send sound. Strangely enough, you don't need to mute Zoom, as it doesn't seem to create a feedback loop through your input when other people on the calls speak. Could be the built in echo cancellation but I'm not sure.
-3. In Zoom, go to audio settings, and select "Stereo Mix" in the drop down for Microphone. You'll now be sending audio from Ableton which you should be able to monitor through your own speakers or headphones. Make sure you're actually sending audio.
-4. You will probably also want to send "Original Sound", and turn off any noise cancellation, depending on what you're sending.
-5. Switching back to your normal mic in Zoom is fine, unlike video.
+### Audio Processing (For Windows)
+0. If VAC changed your system settings so that the virtual cable was you main audio i/o, reset that to the default (or whatever input and output you plan on using).
+1. Within your DAW, or whatever, set your output to your virtual audio cable (line 1 probably). Unless you don't plan on speaking, make sure you have a way to send clean vocal audio through this.
+2. Open up the audio repeater (If this is Windows you're probaby using MME so make sure to open that one). Set Wave In to the virtual cable and Wave Out to the output device you want to monitor sound with (for example, built in speakers)
+3. Start the audio repeater. Adjust the sample rate as necessary. You'll also probably want to bring down the buffer size or you will have beaucoup delay but be aware of clipping.
+4. Within Zoom (or whatever) set microphone input to the virtual cable.
+5. Be sure to turn on original sound if using Zoom - otherwise much of your audio may be wrecked by compression and machine learning algos that get rid of "noise".
 
-It's very possible the audio quality may not be super great on the receiving end of Zoom. I'm assuming there's compression in Zoom that we can't get around, so it may be worthwhile to have someone on the receiving end to record what they're getting from you so you know what it "actually" sounds like, because in all likelihood it is not as pretty as what you're hearing.
+It's very possible the audio quality may not be super great on the receiving end of Zoom, since this is a video conferencing platform which by definition means they're aiming for low latency at the expense of quality. it may be worthwhile to have someone on the receiving end to record what they're getting from you so you know what it "actually" sounds like, because in all likelihood it is not as pretty as what you're hearing.
 
 ### Notes and Further Comments
 - I've experienced that if you start max while already in a call, you lose sound from Zoom; it seems that the easiest way around this is to just open Max first.
